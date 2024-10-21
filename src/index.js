@@ -1,3 +1,5 @@
+import * as MyWindows from "./Modules/my-windows.js";
+
 var menuLinks = [
     { text: "about", href: "/about" },
     {
@@ -87,7 +89,8 @@ var menuLinks = [
       event.target.removeAttribute("class");
   
       if (event.target === topMenuChildren[0]) {
-        closeWindow();
+        //closeWindow();
+        MyWindows.closeWindow();
       }
     } 
     else {
@@ -101,7 +104,8 @@ var menuLinks = [
       if (event.target === topMenuChildren[0]) {
         subMenuEl.style.top = "0";
         mainEl.innerHTML = "<h1>About</h1>";
-        newWindow();
+        //newWindow();
+        MyWindows.newWindow();
       } 
       else {
         event.target.setAttribute("subLinks", buildSubmenu(event.target.text));
@@ -117,20 +121,19 @@ var menuLinks = [
   }); 
   
   // Functions for Browser Object Model (BOM) methods
-  let myWindow;
+  //let myWindow;
   
-  function newWindow() {
+  //MyWindows.newWindow();
+  /* function newWindow() {
     myWindow = window.open(
       "https://www.netflix.com/browse/genre/5685",
       "NETFLIX",
       "width=600, height=500, resizable=yes, scrollbars=yes, location=yes, top=200, left=50"
     );
     myWindow.focus();
-  }
+  } */
   
-  function closeWindow() {
-    myWindow.close();
-  }
+  //MyWindows.closeWindow();
   
   // Cache the "link" object for subLinks array
   let subLinksArray = [];
