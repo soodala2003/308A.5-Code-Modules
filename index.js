@@ -89,7 +89,6 @@ var menuLinks = [
       event.target.removeAttribute("class");
   
       if (event.target === topMenuChildren[0]) {
-        //closeWindow();
         MyWindows.closeWindow();
       }
     } 
@@ -104,7 +103,6 @@ var menuLinks = [
       if (event.target === topMenuChildren[0]) {
         subMenuEl.style.top = "0";
         mainEl.innerHTML = "<h1>About</h1>";
-        //newWindow();
         MyWindows.newWindow();
       } 
       else {
@@ -119,21 +117,6 @@ var menuLinks = [
       }
     }
   }); 
-  
-  // Functions for Browser Object Model (BOM) methods
-  //let myWindow;
-  
-  //MyWindows.newWindow();
-  /* function newWindow() {
-    myWindow = window.open(
-      "https://www.netflix.com/browse/genre/5685",
-      "NETFLIX",
-      "width=600, height=500, resizable=yes, scrollbars=yes, location=yes, top=200, left=50"
-    );
-    myWindow.focus();
-  } */
-  
-  //MyWindows.closeWindow();
   
   // Cache the "link" object for subLinks array
   let subLinksArray = [];
