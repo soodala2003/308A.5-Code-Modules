@@ -1,34 +1,3 @@
-// Validation function for submit 
-export function validateForm(evt) {
-    evt.preventDefault();
-    const userVal = validateUser();
-    if (userVal === false) {
-      evt.returnValue = false;
-      return false;
-    }
-  
-    const passwordVal = validatePassword();
-    if (passwordVal === false) {
-      evt.returnValue = false;
-      return false;
-    }
-  
-    const persistChecked = validateCheckbox();
-    if (!persistChecked) {
-      evt.returnValue = false;
-      return false;
-    } 
-  
-    alert(`Name: ${userVal}
-      Password: ...that's a secret.`);
-    
-    userInput.value = "";
-    passwordInput.value ="";  
-    persistCheckbox.checked = false;
-  
-    return true;
-}
-  
 // User Validation
 export function validateUser() {
     if (userInput.value === "") {
