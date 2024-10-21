@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>The Document Object Model</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <link rel="stylesheet" href="src/style.css">
+        <script src="https://kit.fontawesome.com/d8f052c6cf.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header>
+            <nav id="top-menu"></nav>
+            <nav id="sub-menu"></nav>
+        </header>
+
+        <main>
+            <div class="form-container">
+
+                <form id="login" style="border-bottom: 1px solid lightgray">
+                    <input name="username" type="text" minlength="4" placeholder="Username" required />
+                    <span class="input-icon"><i class="fa-solid fa-user"></i></span><br />
+          
+                    <input name="password" type="text" minlength="12" placeholder="Password" required />
+                    <span class="input-icon"><i class="fa-solid fa-key"></i></span
+                    ><br /><br />
+          
+                    <div class="flex-row">
+                      <input name="persist" type="checkbox" />
+                      <label for="persist">Keep me logged in.</label>
+                      <input type="submit" value="Login" />
+                    </div>
+                    <br /><br />
+                </form>
+            </div>
+        </main>
+
+        <script src="src/index.js" async defer></script>
+        
+    </body>
+</html> 
