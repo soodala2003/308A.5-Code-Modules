@@ -1,4 +1,5 @@
 import * as MyWindows from "./Modules/my-windows.js";
+import * as Validation from "./Modules/validations.js";
 
 var menuLinks = [
     { text: "about", href: "/about" },
@@ -179,19 +180,19 @@ var menuLinks = [
   // Validation function for submit 
   function validateForm(evt) {
     evt.preventDefault();
-    const userVal = validateUser();
+    const userVal = Validation.validateUser();
     if (userVal === false) {
       evt.returnValue = false;
       return false;
     }
   
-    const passwordVal = validatePassword();
+    const passwordVal = Validation.validatePassword();
     if (passwordVal === false) {
       evt.returnValue = false;
       return false;
     }
   
-    const persistChecked = validateCheckbox();
+    const persistChecked = Validation.validateCheckbox();
     if (!persistChecked) {
       evt.returnValue = false;
       return false;
@@ -207,7 +208,7 @@ var menuLinks = [
     return true;
   }
   
-  // User Validation
+  /* // User Validation
   function validateUser() {
     if (userInput.value === "") {
       alert("Please provide a name.");
@@ -235,7 +236,7 @@ var menuLinks = [
       return false;
     } 
     return true;
-  }
+  } */
   
   // Create a helper function for the submenu bar
   function buildSubmenu(texts) {
